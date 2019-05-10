@@ -1,4 +1,6 @@
-python generate_tfrecord.py --label1=human --csv_input=/home/cvlab2/tensorflow/workspace/training_demo/annotations/train.csv --output_path=/home/cvlab2/tensorflow/workspace/training_demo/annotations/train.record --img_path=/home/cvlab2/tensorflow/workspace/training_demo/images/trainpython generate_tfrecord.py --label1=human --csv_input=/home/cvlab2/tensorflow/workspace/training_demo/annotations/train.csv --output_path=/home/cvlab2/tensorflow/workspace/training_demo/annotations/train.record --img_path=/home/cvlab2/tensorflow/workspace/training_demo/images/train# human_detection
+#HUMAN DETECTION
+
+
 
 prerequistics::Nueral netwoks basics,convolutional nueral netwok basics,
 
@@ -128,7 +130,7 @@ PHASE  2: DATA SET PREPROCESSING AND ANNOTTATION
      
    2--csv to tf-record creation
     
-       ---copy the path of the train.csv and test.csv file paste in the respective position of below commandpython generate_tfrecord.py --label1=human --csv_input=/home/cvlab2/tensorflow/workspace/training_demo/annotations/train.csv --output_path=/home/cvlab2/tensorflow/workspace/training_demo/annotations/train.record --img_path=/home/cvlab2/tensorflow/workspace/training_demo/images/trainpython generate_tfrecord.py --label1=human --csv_input=/home/cvlab2/tensorflow/workspace/training_demo/annotations/train.csv --output_path=/home/cvlab2/tensorflow/workspace/training_demo/annotations/train.record --img_path=/home/cvlab2/tensorflow/workspace/training_demo/images/train
+       ---copy the path of the train.csv and test.csv file paste in the respective position of below command
        
        ---move to the legacy-master directory
        
@@ -146,7 +148,7 @@ PHASE  2: DATA SET PREPROCESSING AND ANNOTTATION
  
 PHASE 5:  TRAINING 
  
-  ---Training the model and create the frozen model(forzen_graph.pb).
+  --->Training the model and create the frozen output model file (forzen_graph.pb).
   
       -->move to the models directory
       
@@ -154,6 +156,22 @@ PHASE 5:  TRAINING
        
        -->python object_detection/legacy/train.py --train_dir=/home/yadhu07/models/research/tensorflow/train1
           --pipeline_config_path=/home/yadhu07/models/research/tensorflow/faster_rcnn_resnet101_coco.config
+          
+        -->In the final_model.ipynb file edits the following line of paths
+           
+             ----PATH_TO_CKPT = '/home/yadhu07/models/research/tensorflow/output/frozen_inference_graph.pb'
+             
+             ----PATH_TO_LABELS = '/home/yadhu07/models/research/tensorflow/labels.pbtxt'
+        
+          
+          
+ PHASE 6:  LOADING THE MODEL AND VALIDATION
+ 
+    --->open the jupyter notebook and load the final_model.ipynb file
+    
+    ---->put the 1% of the 50000 images in the '/home/yadhu07/models/research/tensorflow/test' directory'(50 images)
+    
+    ---->Run the file and evaluate result
        
        
       
