@@ -11,9 +11,13 @@ HUMAN DETECTION USING DEEP LEARNING
 The project can be devided into 5 phases
 
 1.Data set collection(image collection)
+
 2.Data set preprocessing+Data set annottation/labelling
+
 3.installing and deveoloping tensorflow model,installing all the required dependencies and libraries
+
 4.Training and Testing using the dataset on the model
+
 5.Testing with the real examples and retraing by changing various parameters
 
 PHASE 1:DATA SET COLLECTION 
