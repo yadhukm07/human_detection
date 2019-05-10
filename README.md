@@ -14,11 +14,13 @@ The project can be devided into 5 phases
 
 2.Data set preprocessing+Data set annottation/labelling
 
-3.installing and deveoloping tensorflow model,installing all the required dependencies and libraries
+3.Tf-record Creation 
 
-4.Training and Testing using the dataset on the model
+4.installing and deveoloping tensorflow model,installing all the required dependencies and libraries
 
-5.Testing with the real examples and retraing by changing various parameters
+5.Training and Testing using the dataset on the model
+
+6.Testing with the real examples and retraing by changing various parameters
 
 
 
@@ -87,17 +89,31 @@ PHASE  2: DATA SET PREPROCESSING AND ANNOTTATION
         ---The output file is in 'xml' format
       
       3.2  --- converting the already annotted text file to the xml format
-          Some dataset that available in the internet like UAV123 comes along with the annnotted file.Those files of 
-          multiple classess or objects.From this annotted files The one corresponds to the class human have to be sorted out
           
-          --
-
-
-
-
+          Some dataset that available in the internet like UAV123 comes along with the annnotted file.Those files of 
+          multiple classess or objects.From this annotted files The one corresponds to the class human have to be 
+          sorted out
+         
+          --The annotted file is in txt file format, Convert this file to the xml file format
+          
+          --done using--"https://youtu.be/dqNwpIRBOrA"
+          
+ PHASE 4:TF RECORD CREATION
+ 
+ ---For training the model tf-record file is needed.It is made from the xml files and iamges
+ 
+  1--xml to csv conversion
+  
+    ---
  
  
  
-
-
-
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
