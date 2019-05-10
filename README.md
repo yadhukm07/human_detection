@@ -100,6 +100,43 @@ PHASE  2: DATA SET PREPROCESSING AND ANNOTTATION
           
           --done using--"https://youtu.be/dqNwpIRBOrA"
           
+PHASE 3:  TENSORFLOW AND OTHER DEPENDENCIES INSTALLATION 
+
+    ---Required python3, pip
+    
+         --->pip install tf-nightly
+         --->pip install pillow
+         --->pip install lxml
+         --->pip install jupyter
+         --->pip install matplotlib
+         --->clone the github-------"git clone https://github.com/tensorflow/models.git"
+         
+    ---IN UBUNTU----
+          
+          --->protoc object_detection/protos/*.proto --python_out=.
+
+          --->export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
+          
+          --->sudo ./configure
+          
+          --->sudo make check
+          
+          --->sudo make install
+
+
+     ---downloading and setting pretrained model
+     
+        --->download faster_rcnn_resnet101_coco from "https://github.com/tensorflow/models/blob/master/research/object_detection
+           
+           /g3doc/detection_model_zoo.md
+          
+        --->extract it to the '/home/yadhu07/models/research/tensorflow'
+        
+        --->copy the corresponding faster_rcnn_resnet101_coco.config file from '/home/yadhu07/models/research/object_detection
+            
+            /samples/configs'
+                 
+          
  PHASE 4:TF RECORD CREATION
  
  ---For training the model tf-record file is needed.It is made from the xml files and iamges
@@ -153,6 +190,10 @@ PHASE 5:  TRAINING
       -->move to the models directory
       
        -->copy the path of train.record and test.record and copy it to the path in the following command
+       
+       -->Editing the cofiguration file 
+       
+            chang
        
        -->python object_detection/legacy/train.py --train_dir=/home/yadhu07/models/research/tensorflow/train1
           --pipeline_config_path=/home/yadhu07/models/research/tensorflow/faster_rcnn_resnet101_coco.config
