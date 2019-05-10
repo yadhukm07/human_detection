@@ -22,6 +22,7 @@ PHASE 1:DATA SET COLLECTION
 
 -->collected  50000 ariel and drone images
 -->Source
+    
     *UAV123------>  "https://ivul.kaust.edu.sa/Pages/Dataset-UAV123.aspx "
     
     *Kerala flood images-----> eg: "https://images.financialexpress.com/2018/08/pic-8.jpg"
@@ -29,6 +30,19 @@ PHASE 1:DATA SET COLLECTION
     *flood ariel images
     
     *Screenshots  from Drone videos of humans from youtube and google-- eg: "https://youtu.be/2JuSrDF4bmo"
+    
+    *All collected data::--->"https://drive.google.com/open?id=1oAzlGOaeC575patIbAZEIPoE3T6NM89_"
+    
+PHASE  2: DATA SET PREPROCESSING AND ANNOTTATION
+
+--->for training the model required tf-record which is build from the dataset
+
+--->This tf-record cna be made from the images through the following steps
+
+   1--making all image to a standard resolution(1920*720)
+      
+       --copy all iamges 
+
 
 
 
