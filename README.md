@@ -1,4 +1,4 @@
-# human_detection
+python generate_tfrecord.py --label1=human --csv_input=/home/cvlab2/tensorflow/workspace/training_demo/annotations/train.csv --output_path=/home/cvlab2/tensorflow/workspace/training_demo/annotations/train.record --img_path=/home/cvlab2/tensorflow/workspace/training_demo/images/trainpython generate_tfrecord.py --label1=human --csv_input=/home/cvlab2/tensorflow/workspace/training_demo/annotations/train.csv --output_path=/home/cvlab2/tensorflow/workspace/training_demo/annotations/train.record --img_path=/home/cvlab2/tensorflow/workspace/training_demo/images/train# human_detection
 
 prerequistics::Nueral netwoks basics,convolutional nueral netwok basics,
 
@@ -144,8 +144,20 @@ PHASE  2: DATA SET PREPROCESSING AND ANNOTTATION
                   /annotations/test.csv --output_path=/home/cvlab2/tensorflow/workspace/training_demo/annotations/test.record
                   --img_path=/home/cvlab2/tensorflow/workspace/training_demo/images/test
  
+PHASE 5:  TRAINING 
  
- 
+  ---Training the model and create the frozen model(forzen_graph.pb).
+  
+      -->move to the models directory
+      
+       -->copy the path of train.record and test.record and copy it to the path in the following command
+       
+       -->python object_detection/legacy/train.py --train_dir=/home/yadhu07/models/research/tensorflow/train1
+          --pipeline_config_path=/home/yadhu07/models/research/tensorflow/faster_rcnn_resnet101_coco.config
+       
+       
+      
+      
  
  
  
