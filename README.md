@@ -41,7 +41,10 @@ PHASE  2: DATA SET PREPROCESSING AND ANNOTTATION
 
    1--making all image to a standard resolution(1920*720)
       
-       --copy all iamges 
+       --copy all iamges to a repository
+       --make an additional repsitory 
+       --copy the image repository address and destination folder address to labelimage.py python code
+       
 
 
 
