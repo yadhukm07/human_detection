@@ -54,11 +54,30 @@ PHASE  2: DATA SET PREPROCESSING AND ANNOTTATION
        --copy the image repository address and destination folder address to labelimage.py python code
        
    2--Rename the all rezized images in serial number(eg:img (1), img (2))
-   
-      ---
+  
+      --This can be done in windows-->"https://youtu.be/5X8OdurpYyM"
 
+   3--Annottate/labelling the image--->using labelimage tool
 
-
+      ---clone the required git-hub repository-->"https://github.com/tzutalin/labelImg.git"
+     
+      ---install Python 3 + Qt5 
+           
+          ---Steps----
+           
+           --> sudo apt-get install pyqt5-dev-tools
+           --> sudo pip3 install -r requirements/requirements-linux-python3.txt
+           --> make qt5py3
+           --> python3 labelImg.py
+           --> python3 labelImg.py [IMAGE_PATH] [PRE-DEFINED CLASS FILE]
+       -
+       --go to the labelimg directory
+       
+       ---Run the labelimage.py file
+       
+       ---In the LabelImg graphical image annotation tool select the directory where the images are kept
+       
+       ---
 
 
 
