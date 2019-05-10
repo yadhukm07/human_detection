@@ -28,9 +28,10 @@ The project can be devided into 5 phases
 
 PHASE 1:DATA SET COLLECTION 
 
---->For better accuracy and result the model have to be trained with a well defined dataset collecting the data set is the first and major major work
+--->For better accuracy and result the model have to be trained with a well defined dataset. collecting the data set is the first and major work
 
 -->collected  50000 ariel and drone images
+
 -->Source
     
     *UAV123------>  "https://ivul.kaust.edu.sa/Pages/Dataset-UAV123.aspx "
@@ -46,8 +47,10 @@ PHASE 1:DATA SET COLLECTION
 PHASE  2: DATA SET PREPROCESSING AND ANNOTTATION
 
 --->for training the model required tf-record which is build from the dataset
+      
+      ----img-->(img+xml)-->csv-->tf-record
 
---->This tf-record cna be made from the images through the following steps
+--->This tf-record can be made from the csv file which can be made through the following steps
 
    1--making all image to a standard resolution(1920*720)
       
@@ -56,6 +59,8 @@ PHASE  2: DATA SET PREPROCESSING AND ANNOTTATION
        --make an additional repsitory
        
        --copy the image repository address and destination folder address to labelimage.py python code
+       
+       --run the labelimg.py and the rezized image will be in the destination folder
        
    2--Rename the all rezized images in serial number(eg:img (1), img (2))
   
@@ -100,44 +105,7 @@ PHASE  2: DATA SET PREPROCESSING AND ANNOTTATION
           
           --done using--"https://youtu.be/dqNwpIRBOrA"
           
-PHASE 3:  TENSORFLOW AND OTHER DEPENDENCIES INSTALLATION 
-
-    ---Required python3, pip
-    
-         --->pip install tf-nightly
-         --->pip install pillow
-         --->pip install lxml
-         --->pip install jupyter
-         --->pip install matplotlib
-         --->clone the github-------"git clone https://github.com/tensorflow/models.git"
-         
-    ---IN UBUNTU----
-          
-          --->protoc object_detection/protos/*.proto --python_out=.
-
-          --->export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
-          
-          --->sudo ./configure
-          
-          --->sudo make check
-          
-          --->sudo make install
-
-
-     ---downloading and setting pretrained model
-     
-        --->download faster_rcnn_resnet101_coco from "https://github.com/tensorflow/models/blob/master/research/object_detection
-           
-           /g3doc/detection_model_zoo.md
-          
-        --->extract it to the '/home/yadhu07/models/research/tensorflow'
-        
-        --->copy the corresponding faster_rcnn_resnet101_coco.config file from '/home/yadhu07/models/research/object_detection
-            
-            /samples/configs'
-                 
-          
- PHASE 4:TF RECORD CREATION
+ PHASE 3:TF RECORD CREATION
  
  ---For training the model tf-record file is needed.It is made from the xml files and iamges
  
@@ -181,7 +149,46 @@ PHASE 3:  TENSORFLOW AND OTHER DEPENDENCIES INSTALLATION
        ---tf-record for testing can be creaeted using
               --> --->python generate_tfrecord.py --label1=human --csv_input=/home/cvlab2/tensorflow/workspace/training_demo
                   /annotations/test.csv --output_path=/home/cvlab2/tensorflow/workspace/training_demo/annotations/test.record
-                  --img_path=/home/cvlab2/tensorflow/workspace/training_demo/images/test
+                  --img_path=/home/cvlab2/tensorflow/workspace/training_demo/images/test          
+          
+PHASE 4:  TENSORFLOW AND OTHER DEPENDENCIES INSTALLATION 
+
+    ---Required python3, pip
+    
+         --->pip install tf-nightly
+         --->pip install pillow
+         --->pip install lxml
+         --->pip install jupyter
+         --->pip install matplotlib
+         --->clone the github-------"git clone https://github.com/tensorflow/models.git"
+         
+    ---IN UBUNTU----
+          
+          --->protoc object_detection/protos/*.proto --python_out=.
+
+          --->export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
+          
+          --->sudo ./configure
+          
+          --->sudo make check
+          
+          --->sudo make install
+
+
+     ---downloading and setting pretrained model
+     
+        --->download faster_rcnn_resnet101_coco from "https://github.com/tensorflow/models/blob/master/research/object_detection
+           
+           /g3doc/detection_model_zoo.md
+          
+        --->extract it to the '/home/yadhu07/models/research/tensorflow'
+        
+        --->copy the corresponding faster_rcnn_resnet101_coco.config file from '/home/yadhu07/models/research/object_detection
+            
+            /samples/configs'
+                 
+          
+
  
 PHASE 5:  TRAINING 
  
@@ -193,7 +200,9 @@ PHASE 5:  TRAINING
        
        -->Editing the cofiguration file 
        
-            chang
+          -->add the path of train.record and test.record
+          
+          -->add the path of label.pbtxt
        
        -->python object_detection/legacy/train.py --train_dir=/home/yadhu07/models/research/tensorflow/train1
           --pipeline_config_path=/home/yadhu07/models/research/tensorflow/faster_rcnn_resnet101_coco.config
@@ -211,6 +220,8 @@ PHASE 5:  TRAINING
     --->open the jupyter notebook and load the final_model.ipynb file
     
     ---->put the 1% of the 50000 images in the '/home/yadhu07/models/research/tensorflow/test' directory'(50 images)
+    
+    ---->Give the path of the 
     
     ---->Run the file and evaluate result
        
