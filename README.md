@@ -104,11 +104,45 @@ PHASE  2: DATA SET PREPROCESSING AND ANNOTTATION
  
   1--xml to csv conversion
   
-    ---
+    ---Clone the directory "https://github.com/vijeshkpaei/legacy.git"
+    
+    ---create a folder images in the directory
+    
+    ---create two sub directory 'test' and 'train' in this 'images' directory
+    
+    ---copy the 75% of the total data set into the train folder(37500) both image and its annottation
+    
+    ---copy the 24% of the total data set into the test folder(12000) both image and its annottation
+    
+    ---create seperate csv file for both training and testing data
+    
+    ---csv file for training can be created using
+        
+        ---> python xml_to_csv.py -i /home/yadhu07/Downloads/legacy-master/images/train -o /home/yadhu07/Downloads/legacy-master/
+             images/train.csv
+             
+     ---csv file for training can be created using        
+      
+         ---> python xml_to_csv.py -i /home/yadhu07/Downloads/legacy-master/images/train -o /home/yadhu07/Downloads/legacy-master
+             images/train.csv
+     
+   2--csv to tf-record creation
+    
+       ---copy the path of the train.csv and test.csv file paste in the respective position of below commandpython generate_tfrecord.py --label1=human --csv_input=/home/cvlab2/tensorflow/workspace/training_demo/annotations/train.csv --output_path=/home/cvlab2/tensorflow/workspace/training_demo/annotations/train.record --img_path=/home/cvlab2/tensorflow/workspace/training_demo/images/trainpython generate_tfrecord.py --label1=human --csv_input=/home/cvlab2/tensorflow/workspace/training_demo/annotations/train.csv --output_path=/home/cvlab2/tensorflow/workspace/training_demo/annotations/train.record --img_path=/home/cvlab2/tensorflow/workspace/training_demo/images/train
+       
+       ---move to the legacy-master directory
+       
+       ---tf-record for traning can be creaeted using
+            
+              --->python generate_tfrecord.py --label1=human --csv_input=/home/cvlab2/tensorflow/workspace/training_demo
+                  /annotations/train.csv --output_path=/home/cvlab2/tensorflow/workspace/training_demo/annotations/train.record
+                  --img_path=/home/cvlab2/tensorflow/workspace/training_demo/images/train
  
- 
- 
- 
+       
+       ---tf-record for testing can be creaeted using
+              --> --->python generate_tfrecord.py --label1=human --csv_input=/home/cvlab2/tensorflow/workspace/training_demo
+                  /annotations/test.csv --output_path=/home/cvlab2/tensorflow/workspace/training_demo/annotations/test.record
+                  --img_path=/home/cvlab2/tensorflow/workspace/training_demo/images/test
  
  
  
