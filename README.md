@@ -20,6 +20,8 @@ The project can be devided into 5 phases
 
 5.Testing with the real examples and retraing by changing various parameters
 
+
+
 PHASE 1:DATA SET COLLECTION 
 
 --->For better accuracy and result the model have to be trained with a well defined dataset collecting the data set is the first and major major work
@@ -46,9 +48,14 @@ PHASE  2: DATA SET PREPROCESSING AND ANNOTTATION
    1--making all image to a standard resolution(1920*720)
       
        --copy all iamges to a repository
-       --make an additional repsitory 
+       
+       --make an additional repsitory
+       
        --copy the image repository address and destination folder address to labelimage.py python code
        
+   2--Rename the all rezized images in serial number(eg:img (1), img (2))
+   
+      ---
 
 
 
