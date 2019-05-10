@@ -59,25 +59,38 @@ PHASE  2: DATA SET PREPROCESSING AND ANNOTTATION
 
    3--Annottate/labelling the image--->using labelimage tool
 
-      ---clone the required git-hub repository-->"https://github.com/tzutalin/labelImg.git"
+    3.1  ---clone the required git-hub repository-->"https://github.com/tzutalin/labelImg.git"
      
-      ---install Python 3 + Qt5 
+          ---install Python 3 + Qt5 
            
-          ---Steps----
-           
-           --> sudo apt-get install pyqt5-dev-tools
-           --> sudo pip3 install -r requirements/requirements-linux-python3.txt
-           --> make qt5py3
-           --> python3 labelImg.py
-           --> python3 labelImg.py [IMAGE_PATH] [PRE-DEFINED CLASS FILE]
+           ---Steps----
+          
+            --> sudo apt-get install pyqt5-dev-tools
+            --> sudo pip3 install -r requirements/requirements-linux-python3.txt
+            --> make qt5py3
+            --> python3 labelImg.py
+            --> python3 labelImg.py [IMAGE_PATH] [PRE-DEFINED CLASS FILE]
        -
-       --go to the labelimg directory
+        --go to the labelimg directory
        
-       ---Run the labelimage.py file
+        ---Go to the data folder and edit the 'predifined_classess.txt' edit the names of the label that  are required to label
+          (Add the label 'human')
        
-       ---In the LabelImg graphical image annotation tool select the directory where the images are kept
+        ---Run the labelimage.py file from the main directory(labelimage folder)
        
-       ---
+        ---In the LabelImg graphical image annotation tool select the directory where the images are kept
+       
+        ---Select the folder where the annotted file is to be saved
+       
+        ---Choose the pascalVOC format for the annotted output
+       
+        ---The output file is in 'xml' format
+      
+      3.2  --- converting the already annotted text file to the xml format
+          Some dataset that available in the internet like UAV123 comes along with the annnotted file.Those files of 
+          multiple classess or objects.From this annotted files The one corresponds to the class human have to be sorted out
+          
+          --
 
 
 
