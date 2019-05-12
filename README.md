@@ -58,9 +58,9 @@ PHASE  2: DATA SET PREPROCESSING AND ANNOTTATION
        
        --make an additional repsitory
        
-       --copy the image repository address and destination folder address to labelimage.py python code
+       --copy the image repository address and destination folder address to rezize.py python code
        
-       --run the labelimg.py and the rezized image will be in the destination folder
+       --run the rezize.py and the rezized image will be in the destination folder
        
    2--Rename the all rezized images in serial number(eg:img (1), img (2))
   
