@@ -230,11 +230,12 @@ For training the model tf-record file is needed.It is made from the xml files an
     
     ---->put the 1% of the 50000 images in the '/home/yadhu07/models/research/tensorflow/test' directory'(50 images)
     
-    ---->Give the path of the 
+    ---->Give the path of the  file in the final_model.ipynb
     
-    ---->Run the file and evaluate result
+    ---->Run the file and evaluate result 
        
-       
+ ## MORE RESULTS
+ 
       
       
                     
