@@ -237,5 +237,9 @@ For training the model tf-record file is needed.It is made from the xml files an
  ## MORE RESULTS
  
       
+![alt text](https://github.com/yadhukm07/human_detection/blob/master/index7.png)
+
+![alt text](https://github.com/yadhukm07/human_detection/blob/master/index.png)
+
       
                     
