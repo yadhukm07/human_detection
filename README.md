@@ -187,7 +187,7 @@ For training the model tf-record file is needed.It is made from the xml files an
 
    #### 3---downloading and setting pretrained model
      
-   download faster_rcnn_resnet101_coco Graph file](https://github.com/tensorflow/models/blob/master/research/object_detection
+   download faster_rcnn_resnet101_coco Graph [file](https://github.com/tensorflow/models/blob/master/research/object_detection
            
   /g3doc/detection_model_zoo.md)
           
