@@ -203,6 +203,7 @@ For training the model tf-record file is needed.It is made from the xml files an
 ## PHASE 5:  TRAINING 
  
   --->Training the model and create the frozen output model file (forzen_graph.pb).
+  --->  [Graph file](https://drive.google.com/open?id=16-YOOQs3lfrvkHWpT1aPH7qoPYAMSeTb)
   
       -->move to the models directory
       
