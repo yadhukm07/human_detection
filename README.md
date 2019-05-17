@@ -20,20 +20,24 @@ which is a faster-rcnn model.
 
 <!-- Prerequisites:::[Nueral netwoks](http://neuralnetworksanddeeplearning.com/chap1.html),[Convolutional Nueral NEtwork](https://skymind.ai/wiki/convolutional-network) -->
 
+## How to use?
 
-The project can be devided into 5 phases
+## Generating Model from Dataset
 
-1.Data set collection(image collection)
+Generation of the model can be achieved through 5 phases. Overview regarding
+which is described below, followed by necessary details.
 
-2.Data set preprocessing+Data set annottation/labelling
+1. Data Set Collection(Image Collection)
 
-3.Tf-record Creation
+2. Data Set Preprocessing and Data Set Annottation(Labelling)
 
-4.installing and deveoloping tensorflow model,installing all the required dependencies and libraries
+3. Tf-record Creation
 
-5.Training and Testing using the dataset on the model
+4. Installing and deveoloping tensorflow model,installing all the required dependencies and libraries
 
-6.Testing with the real examples and retraing by changing various parameters
+5. Training and Testing using the dataset on the model
+
+6. Testing with the real examples and retraing by changing various parameters
 
 ## PHASE 1:DATA SET COLLECTION
 
