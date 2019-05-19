@@ -344,4 +344,4 @@ GOOD LUCK!!!!
 
 ![alt text](https://github.com/yadhukm07/face_mood/blob/master/index7.png)
 
-![alt text](https://github.com/yadhukm07/human_detection/blob/master/index.png)
+![alt text](https://github.com/yadhukm07/face_mood/blob/master/index.png)
